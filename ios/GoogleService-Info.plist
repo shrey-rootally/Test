@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>975217265089-mvvv5gr2g835qplo2a8080cfjs0d5naq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.975217265089-mvvv5gr2g835qplo2a8080cfjs0d5naq</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>975217265089-att3aov55im63jg8fn8ephb1jm63rmmc.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAbP2oL7HZc1QhHjN4ZOn1qJUUs1n8MME0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>975217265089</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.rootallyai.allycare</string>
+	<key>PROJECT_ID</key>
+	<string>rootallyai</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rootallyai.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:975217265089:ios:b16286ae0da0464ac8c740</string>
+	<key>DATABASE_URL</key>
+	<string>https://rootallyai-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

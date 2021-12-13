@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "975217265089",
+    "firebase_url": "https://rootallyai-default-rtdb.firebaseio.com",
+    "project_id": "rootallyai",
+    "storage_bucket": "rootallyai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975217265089:android:d66c2867196a3408c8c740",
+        "android_client_info": {
+          "package_name": "com.rootallyai.allycare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975217265089-att3aov55im63jg8fn8ephb1jm63rmmc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rootallyai.allycare",
+            "certificate_hash": "66e1f7f50b006e00351e471e947b33e3e922cf39"
+          }
+        },
+        {
+          "client_id": "975217265089-9rkcsnf2uqboovvs8lmtpbdbte98vgs6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMCfCqmKQGEWuAiCUikfDhskXHgw6hNFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975217265089-9rkcsnf2uqboovvs8lmtpbdbte98vgs6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
