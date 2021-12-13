@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:developer';
-
 import 'package:get/get.dart';
 import 'package:rootally/constants/local_storage_key.dart';
 import 'package:rootally/model/data/exercise_program_model.dart';
@@ -10,7 +9,6 @@ import 'package:rootally/model/video_download_model.dart';
 import 'package:rootally/services/navigation_service.dart';
 import 'package:rootally/constants/route_path.dart' as routes;
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../locator.dart';
 
 class TodayScreenViewModel extends GetxController {
@@ -23,13 +21,12 @@ class TodayScreenViewModel extends GetxController {
   List<ExerciseAll>? _exerciseAllModel;
 
   void setExerciseProgramModel(ExerciseProgramModel value) {
-
     _exerciseProgramModel = value;
     dataLoaded.value = true;
     update();
   }
-  void setExerciseAllModel(List<ExerciseAll> value){
 
+  void setExerciseAllModel(List<ExerciseAll> value) {
     _exerciseAllModel = value;
     update();
   }
@@ -61,13 +58,12 @@ class TodayScreenViewModel extends GetxController {
     //dataLoaded.value = true;
   }
 
-  List<ExerciseAll> getExerciseWithAllData(){
+  List<ExerciseAll> getExerciseWithAllData() {
     List<ExerciseAll> tempList = [];
-    for(var element in _exerciseProgramModel!.exercises){
-
-      int id  = element.id;
-      for(var innerelement in _exerciseAllModel!){
-        if(id == innerelement.id){
+    for (var element in _exerciseProgramModel!.exercises) {
+      int id = element.id;
+      for (var innerelement in _exerciseAllModel!) {
+        if (id == innerelement.id) {
           tempList.add(innerelement);
           break;
         }
@@ -77,10 +73,9 @@ class TodayScreenViewModel extends GetxController {
   }
 
   Future needToDownloadFiles({required List<ExerciseAll> list}) async {
-    filesToDownload.value = await VideoDownload().checkFilesToDownload(list:list);
-
+    filesToDownload.value =
+        await VideoDownload().checkFilesToDownload(list: list);
   }
-
 
   Future<void> getLocalData() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();

@@ -384,12 +384,14 @@ class _PosenetScreenState extends State<PosenetScreen> {
       actions: [
         TextButton(
           onPressed: () {
+            Future.value(true);
             canExit = true;
           },
           child: const Text("Confirm"),
         ),
         TextButton(
           onPressed: () {
+            Future.value(false);
             canExit = false;
           },
           child: const Text("Cancel"),
@@ -399,12 +401,13 @@ class _PosenetScreenState extends State<PosenetScreen> {
 
     showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (BuildContext context) {
         return dialog;
       },
     );
 
-    return Future.value(canExit);
+    return false;
   }
 
   @override
@@ -426,8 +429,30 @@ class _PosenetScreenState extends State<PosenetScreen> {
     ValueNotifier<bool> isDialOpen = ValueNotifier(false);
 
     return ConditionalWillPopScope(
+      onWillPop: () async {
+        // show the confirm dialog
+        print("i am bhere");
+        return await showDialog(
+              context: context,
+              builder: (_) => AlertDialog(
+                title: Text('Are you sure want to leave?'),
+                actions: [
+                  ElevatedButton(
+                    onPressed: () => Navigator.of(context).pop(false),
+                    //return false when click on "NO"
+                    child: Text('No'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () => Navigator.of(context).pop(true),
+                    //return true when click on "Yes"
+                    child: Text('Yes'),
+                  ),
+                ],
+              ),
+            ) ??
+            false;
+      },
       shouldAddCallbacks: true,
-      onWillPop: _promptExit,
       child: Scaffold(
         body: Row(
           mainAxisAlignment: MainAxisAlignment.center,
