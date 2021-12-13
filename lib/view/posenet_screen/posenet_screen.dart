@@ -431,7 +431,7 @@ class _PosenetScreenState extends State<PosenetScreen> {
     return ConditionalWillPopScope(
       onWillPop: () async {
         // show the confirm dialog
-        print("i am bhere");
+        print("i am here");
         return await showDialog(
               context: context,
               builder: (_) => AlertDialog(
